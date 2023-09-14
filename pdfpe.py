@@ -34,7 +34,7 @@ def main():
         text = page.get_text()
         for word in text.split():
             if re.search(pattern, word) and word not in retval:
-                    retval.append(word[:-1])
+                    retval.append(word)
     
     write_json(filename[:-4] + "-xt.json", retval)
     return 0
